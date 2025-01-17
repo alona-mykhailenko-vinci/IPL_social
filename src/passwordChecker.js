@@ -5,6 +5,9 @@ class PasswordChecker {
     static containsSpecialChar(password) {
         return /[!@#$%^&*(),.?":{}|<>]/.test(password); // At least one special character
       }
+    static containsDigit(password) {
+    return /\d/.test(password); // At least one digit
+    }
   }
   export { PasswordChecker };
   

@@ -20,4 +20,14 @@ describe("PasswordChecker class should implement a password checker function", f
       expect(PasswordChecker.containsSpecialChar("Password1")).toBe(false);
     });
   });
+
+  describe("PasswordChecker function digit validation", function () {
+    it("given a password 'Password1!'", function () {
+      expect(PasswordChecker.containsDigit("Password1!")).toBe(true);
+    });
+
+    it("given a password 'Password!'", function () {
+      expect(PasswordChecker.containsDigit("Password!")).toBe(false);
+    });
+  });
 });
