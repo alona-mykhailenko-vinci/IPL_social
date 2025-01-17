@@ -1,0 +1,21 @@
+{
+  "name": "ipl-social",
+  "version": "1.0.0",
+  "description": "A DevOps project with CI pipeline using GitHub Actions and password validation.",
+  "main": "passwordChecker.js",
+  "type": "module",
+  "scripts": {
+    "test": "jasmine spec/* .js"
+  },
+  "keywords": [
+    "DevOps",
+    "GitHub Actions",
+    "TDD",
+    "Password Validation"
+  ],
+  "author": "Mykhailenko Alona",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.1.0"
+  }
+}
