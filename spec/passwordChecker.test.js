@@ -30,4 +30,14 @@ describe("PasswordChecker class should implement a password checker function", f
       expect(PasswordChecker.containsDigit("Password!")).toBe(false);
     });
   });
+
+  describe("PasswordChecker function prohibited substring 'IPL'", function () {
+    it("given a password 'IPLPass1!'", function () {
+      expect(PasswordChecker.containsProhibitedSubstring("IPLPass1!")).toBe(false);
+    });
+
+    it("given a password 'ValidPass1!'", function () {
+      expect(PasswordChecker.containsProhibitedSubstring("ValidPass1!")).toBe(true);
+    });
+  });
 });

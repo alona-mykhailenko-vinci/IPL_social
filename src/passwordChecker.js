@@ -8,6 +8,9 @@ class PasswordChecker {
     static containsDigit(password) {
     return /\d/.test(password); // At least one digit
     }
+    static containsProhibitedSubstring(password) {
+        return !/(ipl)/i.test(password); // Does not contain "IPL" (case-insensitive)
+      }
   }
   export { PasswordChecker };
   
