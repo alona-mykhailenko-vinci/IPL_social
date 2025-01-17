@@ -29,7 +29,7 @@ Additionally, the project includes:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone [GitHub Repository Link]
+   git clone [https://github.com/alona-mykhailenko-vinci/IPL_social.git]
 
 2. To enter the project
     cd IPL_social 
