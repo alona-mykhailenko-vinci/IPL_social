@@ -1,16 +1,27 @@
 class PasswordChecker {
+    // Check if the password is at least 8 characters long
     static containsAtLeast8Chars(password) {
-      return /.{8,}/.test(password); // At least 8 characters
+      if (!password) return false; // Ensure password is not null or undefined
+      return /.{8,}/.test(password);
     }
+  
+    // Check if the password contains at least one special character
     static containsSpecialChar(password) {
-        return /[!@#$%^&*(),.?":{}|<>]/.test(password); // At least one special character
-      }
-    static containsDigit(password) {
-    return /\d/.test(password); // At least one digit
+      if (!password) return false; // Ensure password is not null or undefined
+      return /[!@#$%^&*(),.?":{}|<>]/.test(password);
     }
+  
+    // Check if the password contains at least one digit
+    static containsDigit(password) {
+      if (!password) return false; // Ensure password is not null or undefined
+      return /\d/.test(password);
+    }
+  
+    // Check if the password does not contain the prohibited substring "IPL" (case-insensitive)
     static containsProhibitedSubstring(password) {
-        return !/(ipl)/i.test(password); // Does not contain "IPL" (case-insensitive)
-      }
+      if (!password) return false; // Ensure password is not null or undefined
+      return !/(ipl)/i.test(password);
+    }
   }
   export { PasswordChecker };
   

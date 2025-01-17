@@ -40,4 +40,18 @@ describe("PasswordChecker class should implement a password checker function", f
       expect(PasswordChecker.containsProhibitedSubstring("ValidPass1!")).toBe(true);
     });
   });
+  describe("PasswordChecker function with edge cases", function () {
+    it("given an empty password ''", function () {
+      expect(PasswordChecker.containsAtLeast8Chars("")).toBe(false);
+    });
+  
+    it("given a null password", function () {
+      expect(PasswordChecker.containsAtLeast8Chars(null)).toBe(false);
+    });
+  
+    it("given an undefined password", function () {
+      expect(PasswordChecker.containsAtLeast8Chars(undefined)).toBe(false);
+    });
+  });
+  
 });
